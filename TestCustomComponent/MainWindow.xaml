@@ -4,9 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestCustomComponent"
+        xmlns:myToolTip="clr-namespace:UserControls;assembly=UserControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+
+        <myToolTip:ComponentLabel UserControlTextBlockToolTip="Some texts" 
+
+                                UserControlToolTipTitle="Title"                               
+
+                                x:Name="customToolTip" />
+
     </Grid>
 </Window>

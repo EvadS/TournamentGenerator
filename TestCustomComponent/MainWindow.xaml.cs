@@ -23,6 +23,8 @@ namespace TestCustomComponent
         public MainWindow()
         {
             InitializeComponent();
+
+         
         }
     }
 }
