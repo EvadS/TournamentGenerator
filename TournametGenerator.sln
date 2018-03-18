@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournametGenerator.WPF", "TestCustomComponent\TournametGenerator.WPF.csproj", "{E91A01F6-4DCE-40F3-A2BB-7C8E2E45FE3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournametGenerator.UserControls", "UserControls\TournametGenerator.UserControls.csproj", "{96578C6A-4635-4220-867B-8C8F01A3E3D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournametGenerator.ViewModels", "ViewModels\TournametGenerator.ViewModels.csproj", "{33B3AF50-2B94-40BB-9D86-9EAE515EF244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournametGenerator.BLL", "BLL\TournametGenerator.BLL.csproj", "{A8CE29D1-A218-4952-9C12-2DB370C11DB7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{33B3AF50-2B94-40BB-9D86-9EAE515EF244} = {33B3AF50-2B94-40BB-9D86-9EAE515EF244}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournametGenerator.DAL", "DAL\TournametGenerator.DAL.csproj", "{C9571071-4079-4F21-AF38-8E8AAC7FA075}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentGenerator.ImportHelper", "TournamentGenerator.ExcelImport\TournamentGenerator.ImportHelper.csproj", "{D0E34CF5-8FAA-4E58-A3C1-EB501465791D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E91A01F6-4DCE-40F3-A2BB-7C8E2E45FE3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E91A01F6-4DCE-40F3-A2BB-7C8E2E45FE3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E91A01F6-4DCE-40F3-A2BB-7C8E2E45FE3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E91A01F6-4DCE-40F3-A2BB-7C8E2E45FE3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96578C6A-4635-4220-867B-8C8F01A3E3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96578C6A-4635-4220-867B-8C8F01A3E3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96578C6A-4635-4220-867B-8C8F01A3E3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96578C6A-4635-4220-867B-8C8F01A3E3D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33B3AF50-2B94-40BB-9D86-9EAE515EF244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33B3AF50-2B94-40BB-9D86-9EAE515EF244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33B3AF50-2B94-40BB-9D86-9EAE515EF244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33B3AF50-2B94-40BB-9D86-9EAE515EF244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8CE29D1-A218-4952-9C12-2DB370C11DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8CE29D1-A218-4952-9C12-2DB370C11DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8CE29D1-A218-4952-9C12-2DB370C11DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8CE29D1-A218-4952-9C12-2DB370C11DB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9571071-4079-4F21-AF38-8E8AAC7FA075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9571071-4079-4F21-AF38-8E8AAC7FA075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9571071-4079-4F21-AF38-8E8AAC7FA075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9571071-4079-4F21-AF38-8E8AAC7FA075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E34CF5-8FAA-4E58-A3C1-EB501465791D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E34CF5-8FAA-4E58-A3C1-EB501465791D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E34CF5-8FAA-4E58-A3C1-EB501465791D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E34CF5-8FAA-4E58-A3C1-EB501465791D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
