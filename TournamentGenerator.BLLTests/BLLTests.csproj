@@ -55,7 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\TournametGenerator.BLL.csproj">
+    <ProjectReference Include="..\TournamentGenerator.BLL\TournametGenerator.BLL.csproj">
       <Project>{A8CE29D1-A218-4952-9C12-2DB370C11DB7}</Project>
       <Name>TournametGenerator.BLL</Name>
     </ProjectReference>
