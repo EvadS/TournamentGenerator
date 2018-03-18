@@ -20,10 +20,40 @@ namespace UserControls
     /// </summary>
     public partial class ComponentLabel : UserControl
     {
+ 
+
         public ComponentLabel()
         {
             InitializeComponent();
+
         }
+
+        #region menu Events 
+        private void TestControl_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            // Add logic...
+        }
+
+        // or
+
+        private void TestControl_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // Add logic...
+        }
+
+        // or
+
+        private void TestControl_OnMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            // Add logic...
+        }
+        #endregion
+        //-------------------------------------------------------------------------------
+
+
+
+        public int CustomerID { get; set; }
+        public string CustomerName { get; set; }
 
         public double UserControlToolTipX
         {
@@ -37,16 +67,49 @@ namespace UserControls
             set { this.UserControlToolTipXY.Y = value; }
         }
 
-        public string UserControlTextBlockToolTip
-        {
-            get { return TextBlockToolTip.Text; }
-            set { TextBlockToolTip.Text = value; }
-        }
+        
 
         public string UserControlToolTipTitle
         {
             get { return ToolTipTitle.Text; }
             set { ToolTipTitle.Text = value; }
+        }
+
+        public event RoutedEventHandler MenuEventClick1;
+        public event RoutedEventHandler MenuEventClick2;
+        public event RoutedEventHandler MenuEventClick3;
+
+        private void Menu1_Click(object sender, RoutedEventArgs e)
+        {
+            if (MenuEventClick1 != null)
+            {
+                MenuEventClick1(this, new RoutedEventArgs());
+            }
+        }
+
+
+        private void Menu2_Click(object sender, RoutedEventArgs e)
+        {
+            if (MenuEventClick2 != null)
+            {
+                MenuEventClick2(this, new RoutedEventArgs());
+            }
+        }
+        private void Menu3_Click(object sender, RoutedEventArgs e)
+        {
+            if (MenuEventClick3 != null)
+            {
+                MenuEventClick3(this, new RoutedEventArgs());
+            }
+        }
+
+        public event RoutedEventHandler CustomClick;
+        private void TheClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (CustomClick != null)
+            {
+                CustomClick(this, new RoutedEventArgs());
+            }
         }
     }
 }

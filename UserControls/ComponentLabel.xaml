@@ -5,8 +5,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="200" d:DesignWidth="300">
 
+    <UserControl.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="worked 1 " Click="Menu1_Click" />
+            <MenuItem Header="Menu2" Click="Menu2_Click"  />
+            <MenuItem Header="Menu3"  Click="Menu3_Click"  />
+
+        </ContextMenu>
+    </UserControl.ContextMenu>
+    
     <UserControl.RenderTransform>
         <TransformGroup>
             <ScaleTransform ScaleX="1" ScaleY="1"/>
@@ -16,12 +25,10 @@
         </TransformGroup>
     </UserControl.RenderTransform>
 
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" 
-
-	MinWidth="200" MinHeight="120">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="200" MinHeight="120">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.333*"/>
-            <RowDefinition Height="0.667*"/>
+            <RowDefinition />
+          
         </Grid.RowDefinitions>
         <Rectangle Fill="#FFFBFBFB" Stroke="#FF000000" RadiusX="10" RadiusY="10"
 
@@ -72,13 +79,19 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <TextBlock Text="TextBlock" TextWrapping="Wrap" x:Name="TextBlockToolTip" 
-   
-        	RenderTransformOrigin="0.5,0.5" Grid.Row="1" HorizontalAlignment="Left" 
 
-            	VerticalAlignment="Center" Margin="20,0,0,20" />
+
         <TextBlock Name="ToolTipTitle" HorizontalAlignment="Stretch" Margin="15,16,15,6.1" 
+        	FontSize="14" Text="title" d:LayoutOverrides="Height" >
+             
+        </TextBlock>
 
-        	FontSize="14" Text="title" d:LayoutOverrides="Height" />
-    </Grid>
+        <Button x:Name="TheClearButton"   
+                Content="X"   
+                Grid.Row="0"   
+                HorizontalAlignment="Right" 
+                Height="35"       
+                Width="30"
+                Click="TheClearButton_Click"/>
+    </Grid> 
 </UserControl>
