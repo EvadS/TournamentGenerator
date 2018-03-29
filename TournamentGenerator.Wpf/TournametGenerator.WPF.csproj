@@ -111,6 +111,10 @@
       <Project>{a8ce29d1-a218-4952-9c12-2db370c11db7}</Project>
       <Name>TournametGenerator.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TournamentGenerator.DAL\TournametGenerator.DAL.csproj">
+      <Project>{C9571071-4079-4F21-AF38-8E8AAC7FA075}</Project>
+      <Name>TournametGenerator.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TournamentGenerator.UserControls\TournametGenerator.UserControls.csproj">
       <Project>{96578c6a-4635-4220-867b-8c8f01a3e3d1}</Project>
       <Name>TournametGenerator.UserControls</Name>

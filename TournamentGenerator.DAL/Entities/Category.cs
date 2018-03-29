@@ -10,7 +10,7 @@ namespace DAL.Entities
     {
         public Category()
         {
-            Pages = new HashSet<Page>();
+            Players = new HashSet<Player>();
         }
 
         public int id { get; set; }
@@ -23,6 +23,6 @@ namespace DAL.Entities
 
         public int Sex { get; set; }
 
-        public virtual ICollection<Page> Pages { get; set; }
+       public virtual ICollection<Player> Players { get; set; }
     }
 }

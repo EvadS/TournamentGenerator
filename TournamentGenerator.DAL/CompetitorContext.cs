@@ -19,43 +19,25 @@ namespace DAL
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Club> Clubs { get; set; }
         public virtual DbSet<Page> Pages { get; set; }
-        public virtual DbSet<Phase> Phases { get; set; }
         public virtual DbSet<Player> Players { get; set; }
-        public virtual DbSet<Position> Positions { get; set; }
         public virtual DbSet<Сoach> Сoaches { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>()
-                .HasMany(e => e.Pages)
-                .WithRequired(e => e.Category)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Club>()
                 .HasMany(e => e.Players)
-                .WithRequired(e => e.Club)
-                .WillCascadeOnDelete(false);
+                .WithMany(e => e.Categories)
+                .Map(m => m.ToTable("CategoryPlayer").MapLeftKey("CategoryId").MapRightKey("PlayerID"));
 
             modelBuilder.Entity<Page>()
                 .HasMany(e => e.Players)
                 .WithMany(e => e.Pages)
-                .Map(m => m.ToTable("PlayerPage").MapLeftKey("PageID").MapRightKey("PlayerID"));
-
-            modelBuilder.Entity<Phase>()
-                .HasMany(e => e.Players)
-                .WithMany(e => e.Phases)
-                .Map(m => m.ToTable("PlayerPhase").MapLeftKey("PhaseId").MapRightKey("PlayerId"));
+                .Map(m => m.ToTable("PlayerPage").MapLeftKey("PageId").MapRightKey("PlayerId"));
 
             modelBuilder.Entity<Player>()
-                .HasMany(e => e.Positions)
+                .HasMany(e => e.Сoach)
                 .WithMany(e => e.Players)
-                .Map(m => m.ToTable("PlayerPosition").MapLeftKey("PlayerID").MapRightKey("PositionID"));
-
-            modelBuilder.Entity<Сoach>()
-                .HasMany(e => e.Players)
-                .WithRequired(e => e.Сoach)
-                .WillCascadeOnDelete(false);
+                .Map(m => m.ToTable("CoachPlayer").MapLeftKey("PlayerId").MapRightKey("CoachId"));
         }
-
     }
 }

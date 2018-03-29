@@ -13,14 +13,10 @@ namespace DAL.Entities
             Players = new HashSet<Player>();
         }
 
-        public int id { get; set; }
-
-        public int PageNumber { get; set; }
-
-        public int CategoryID { get; set; }
-
-        public virtual Category Category { get; set; }
-
+        public int Id { get; set; }
+        public int Row { get; set; }
+        public int Col { get; set; }
+        public int PageNum { get; set; }
         public virtual ICollection<Player> Players { get; set; }
     }
 }

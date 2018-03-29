@@ -10,11 +10,11 @@ namespace DAL.Entities
 {
     public partial class Player
     {
-       public Player()
+        public Player()
         {
+            Categories = new HashSet<Category>();
+            Сoach = new HashSet<Сoach>();
             Pages = new HashSet<Page>();
-            Phases = new HashSet<Phase>();
-            Positions = new HashSet<Position>();
         }
 
         public int Id { get; set; }
@@ -32,7 +32,6 @@ namespace DAL.Entities
 
         public int Q { get; set; }
 
-        [Column(TypeName = "smalldatetime")]
         public DateTime BirthDate { get; set; }
 
         public int СoachID { get; set; }
@@ -41,12 +40,10 @@ namespace DAL.Entities
 
         public virtual Club Club { get; set; }
 
-        public virtual Сoach Сoach { get; set; }
+        public virtual ICollection<Category> Categories { get; set; }
+
+        public virtual ICollection<Сoach> Сoach { get; set; }
 
         public virtual ICollection<Page> Pages { get; set; }
-
-         public virtual ICollection<Phase> Phases { get; set; }
-
-        public virtual ICollection<Position> Positions { get; set; }
     }
 }
