@@ -11,10 +11,6 @@ namespace BLL.Concrete.Tests
     [TestClass()]
     public class PageManagerTests
     {
-        [TestMethod()]
-        public void ArrangeInTournamentGridTest()
-        {
-            Assert.Fail();
-        }
+      
     }
 }

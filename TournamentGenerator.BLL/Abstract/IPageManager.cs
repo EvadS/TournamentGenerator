@@ -42,6 +42,6 @@ namespace BLL.Abstract
         /// 
         /// </summary>
         /// <returns></returns>
-        bool ArrangeInTournamentGrid();
+        bool ArrangeInTournamentGrid(List<ViewModels.Competitor> competitorsList);
     }
 }

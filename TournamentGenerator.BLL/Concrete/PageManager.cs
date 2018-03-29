@@ -37,7 +37,7 @@ namespace BLL.Concrete
             DataSet dataSet = ExcelHepler.ImportFromExcel(filePath);
         }
 
-        public bool ArrangeInTournamentGrid()
+        public bool ArrangeInTournamentGrid(List<ViewModels.Competitor> competitorsList)
         {
             return false;
         }
