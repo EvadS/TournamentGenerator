@@ -31,5 +31,17 @@ namespace BLL.Abstract
         /// автоматическое расположение 
         /// </summary>
         void ArrangeByTreeStructure();
+
+        /// <summary>
+        /// загрузить с excel
+        /// </summary>
+        /// <param name="filePath"></param>
+        void ImportFromExcel(string filePath);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        bool ArrangeInTournamentGrid();
     }
 }

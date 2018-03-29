@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournametGenerator.ViewMode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLLTests", "TournamentGenerator.BLLTests\BLLTests.csproj", "{4221F5FC-86BB-4203-8B6B-0FA5CB5C5809}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournametGenerator.BLLTests", "TournametGenerator.BLLTests\TournametGenerator.BLLTests.csproj", "{50FC6C9D-7F7C-4C68-A222-DFA2173DE4A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{4221F5FC-86BB-4203-8B6B-0FA5CB5C5809}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4221F5FC-86BB-4203-8B6B-0FA5CB5C5809}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4221F5FC-86BB-4203-8B6B-0FA5CB5C5809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50FC6C9D-7F7C-4C68-A222-DFA2173DE4A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50FC6C9D-7F7C-4C68-A222-DFA2173DE4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50FC6C9D-7F7C-4C68-A222-DFA2173DE4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50FC6C9D-7F7C-4C68-A222-DFA2173DE4A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

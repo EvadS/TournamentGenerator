@@ -40,11 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryHelper.cs" />
-    <Compile Include="CompetitorsHelper.cs" />
-    <Compile Include="CompetitorsPageHelper.cs" />
+    <Compile Include="Abstract\ICategoryManager.cs" />
+    <Compile Include="Abstract\IPageManager.cs" />
+    <Compile Include="Abstract\IPlayerManager.cs" />
+    <Compile Include="Concrete\CategoryManager.cs" />
+    <Compile Include="Concrete\PageManager.cs" />
+    <Compile Include="Concrete\PlayerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TournamentPosition.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TournamentGenerator.DAL\TournametGenerator.DAL.csproj">
