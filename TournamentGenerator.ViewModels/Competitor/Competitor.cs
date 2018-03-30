@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ViewModels
 {
+    /// <summary>
+    /// учасник отображаемый на странице 
+    /// </summary>
     public class Competitor
     {
         public int Id { get; set; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TournametGenerator.ViewModels.Result;
 
 namespace BLL.Abstract
 {
@@ -36,12 +37,7 @@ namespace BLL.Abstract
         /// загрузить с excel
         /// </summary>
         /// <param name="filePath"></param>
-        void ImportFromExcel(string filePath);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        bool ArrangeInTournamentGrid(List<ViewModels.Competitor> competitorsList);
+        Result ImportFromExcel(string filePath);
+ 
     }
 }

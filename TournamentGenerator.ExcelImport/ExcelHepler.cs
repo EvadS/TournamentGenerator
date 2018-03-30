@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TournametGenerator.ViewModels.Result;
 
 namespace TournamentGenerator.Imports
 {
@@ -41,15 +42,23 @@ namespace TournamentGenerator.Imports
         }
 
 
-        public static DataSet ImportFromExcel(string filePath)
+        /// <summary>
+        /// создание DataSet из файла excel 
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        public static Result<DataSet> ImportFromExcel(string filePath)
         {
+
             OleDbDataAdapter adapter = null;
             var connectionString = ExcelHepler.ExcelConnectionString(filePath);
             OleDbConnection excelConnection = new OleDbConnection();
             excelConnection.ConnectionString = connectionString;
- 
+
+            Result<DataSet> result = new Result<DataSet>();
+
             try
-            { 
+            {
                 excelConnection.Open();
                 DataTable dtTables = new DataTable();
 
@@ -89,11 +98,16 @@ namespace TournamentGenerator.Imports
                     ds.Tables.Add(dtItems);
                 }
 
-                return ds;
+                result.Data = ds;
+                result.Success = true;
+                return result;
             }
             catch (Exception ex)
             {
-                return null;
+                result.Data = new DataSet();
+                result.Success = false;
+                result.Message = ex.Message;
+                return result;
             }
             finally
             {
@@ -101,5 +115,21 @@ namespace TournamentGenerator.Imports
                 excelConnection.Dispose();
             }
         }
+
+        public static Result<bool> ExistsMinimumColumnsCount(DataTable dataTable, int minColumnsCount)
+        {
+            Result<bool> result = new Result<bool>();
+            result.Success = true;
+            var columns = dataTable.Columns;
+
+            if (columns.Count < minColumnsCount)
+            {
+                result.Success = false;    
+            }
+        
+            return result;
+        }
+
+
     }
 }

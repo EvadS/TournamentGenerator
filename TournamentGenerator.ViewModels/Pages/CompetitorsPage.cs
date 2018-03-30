@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TournametGenerator.ViewModels.Competitor;
 
 namespace ViewModels
 {
@@ -11,6 +12,6 @@ namespace ViewModels
         public int Id { get; set; }
         public int PageNumber { get; set; }
         public Category Category { get; set; }
-        public List<Competitor> CompetitorPage { get; set; }
+        List<SortableCompetitor> CompetitorsList { get; set; }
     }
 }

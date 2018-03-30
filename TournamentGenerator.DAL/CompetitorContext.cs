@@ -1,19 +1,14 @@
 ﻿using DAL.Entities;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
     public class CompetitorContext : DbContext
     {
         public CompetitorContext()
-            : base("CompetitorsConnection")
+          //  : base("CompetitorsConnection")
         {
-
+           
         }
 
         public virtual DbSet<Category> Categories { get; set; }
@@ -38,6 +33,8 @@ namespace DAL
                 .HasMany(e => e.Сoach)
                 .WithMany(e => e.Players)
                 .Map(m => m.ToTable("CoachPlayer").MapLeftKey("PlayerId").MapRightKey("CoachId"));
+
+  
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿
 using BLL;
+using BLL.Abstract;
+using BLL.Concrete;
 using DAL.Entities;
 using DAL.Reposotories.SQL;
 using Microsoft.Win32;
@@ -19,20 +21,34 @@ namespace Competitors
         {
             InitializeComponent();
 
-            SQLСoachtRepository repo = new SQLСoachtRepository();
-            Сoach coach = new Сoach()
+            /*     SQLСoachtRepository repo = new SQLСoachtRepository();
+                 Сoach coach = new Сoach()
+                 {
+                     FirstName = "F",
+                     LastName = "L",
+                     MiddleName = "M",
+                 };
+
+                 repo.Create(coach);
+                 repo.Save();
+
+                 var test = repo.GetList();
+
+                 int a = 10;
+                 */
+
+            IPageManager pageManager = new PageManager();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+            if (openFileDialog.ShowDialog() == true)
             {
-                FirstName = "F",
-                LastName = "L",
-                MiddleName = "M",
-            };
+                var res =  pageManager.ImportFromExcel(openFileDialog.FileName);
 
-            repo.Create(coach);
-            repo.Save();
 
-            var test = repo.GetList();
+            }
 
-            int a = 10;
+         
 
         }
 
