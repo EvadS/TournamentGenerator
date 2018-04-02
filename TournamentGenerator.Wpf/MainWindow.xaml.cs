@@ -23,9 +23,14 @@ namespace Competitors
         {
             InitializeComponent();
 
-        
+            using (var db = new TournamentContext())
+            {
 
-            // TODO: for test 
+                var artists = db.Categories.ToList();
+                int a = 10;
+            }
+
+        
             IPageManager pageManager = new PageManager();
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";

@@ -8,10 +8,10 @@ namespace DAL.Entities
 {
     public partial class Category
     {
-        //public Category()
-        //{
-        //    Players = new HashSet<Player>();
-        //}
+        public Category()
+        {
+            Players = new HashSet<Player>();
+        }
 
         public int id { get; set; }
 
@@ -23,6 +23,6 @@ namespace DAL.Entities
 
         public int Sex { get; set; }
 
-     //  public virtual ICollection<Player> Players { get; set; }
+        public virtual ICollection<Player> Players { get; set; }
     }
 }
