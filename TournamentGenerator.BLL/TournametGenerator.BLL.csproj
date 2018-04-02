@@ -46,7 +46,8 @@
     <Compile Include="Concrete\CategoryManager.cs" />
     <Compile Include="Concrete\PageManager.cs" />
     <Compile Include="Concrete\PlayerManager.cs" />
-    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Concrete\Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Helpers\Constants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -7,17 +7,18 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TournametGenerator.DAL.DB;
 
 namespace DAL.Reposotories.SQL
 {
     public class SQLCategoryRepository : IRepository<Category>
     {
 
-        private CompetitorContext db;
+        private TournamentContext db;
 
         public SQLCategoryRepository()
         {
-            this.db = new CompetitorContext();
+            this.db = new TournamentContext();
            
             // TODO: for test 
             var tt = (SqlConnection)db.Database.Connection; ;

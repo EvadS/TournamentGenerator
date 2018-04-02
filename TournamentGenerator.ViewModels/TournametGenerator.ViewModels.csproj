@@ -42,9 +42,9 @@
   <ItemGroup>
     <Compile Include="Category.cs" />
     <Compile Include="Competitor\Competitor.cs" />
+    <Compile Include="Competitor\SortableCompetitor.cs" />
     <Compile Include="Pages\CompetitorsPage.cs" />
     <Compile Include="Competitor\ImportedCompetitor.cs" />
-    <Compile Include="ImportedCompetitor.cs" />
     <Compile Include="Pages\PageNetList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Result\Result.cs" />

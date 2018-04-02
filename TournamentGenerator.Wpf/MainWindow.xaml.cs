@@ -7,6 +7,8 @@ using DAL.Reposotories.SQL;
 using Microsoft.Win32;
 using System;
 using System.Windows;
+using TournametGenerator.DAL.DB;
+using System.Linq;
 
 namespace Competitors
 {
@@ -21,22 +23,9 @@ namespace Competitors
         {
             InitializeComponent();
 
-            /*     SQLСoachtRepository repo = new SQLСoachtRepository();
-                 Сoach coach = new Сoach()
-                 {
-                     FirstName = "F",
-                     LastName = "L",
-                     MiddleName = "M",
-                 };
+        
 
-                 repo.Create(coach);
-                 repo.Save();
-
-                 var test = repo.GetList();
-
-                 int a = 10;
-                 */
-
+            // TODO: for test 
             IPageManager pageManager = new PageManager();
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";

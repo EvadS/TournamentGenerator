@@ -182,5 +182,10 @@ namespace BLL.Concrete
 
             return result;
         }
+
+        Result IPageManager.ImportFromExcel(string filePath)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
