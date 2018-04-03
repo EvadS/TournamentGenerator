@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,15 +15,15 @@ namespace DAL.Entities
         }
 
         public int id { get; set; }
-
-        public int WeightFrom { get; set; }
-
-        public int WeightTo { get; set; }
-
-        public int Age { get; set; }
+        public int AgeFrom { get; set; }
+        public int AgeTo { get; set; }
+        public int Weight { get; set; }
 
         public int Sex { get; set; }
 
+        public int IsBoundary { get; set; }
+
         public virtual ICollection<Player> Players { get; set; }
-    }
+
+     }
 }

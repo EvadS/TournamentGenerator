@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ViewModels;
 
-namespace BLL.Abstract
+namespace BLL.Interfaces
 {
     /// <summary>
     /// TODO : impletent DI
     /// </summary>
-    public interface  ICategoryManager
+    public interface  ICategoryManager: IDisposable
     {
         List<Category> GetCategories();
         bool CreateCategory(Category category);

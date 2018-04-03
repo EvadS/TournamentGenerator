@@ -7,7 +7,7 @@ using ViewModels;
 
 namespace BLL.Abstract
 {
-    public interface IPlayerManager
+    public interface IPlayerManager 
     {
         /// <summary>
         /// переместить учасника на страницу 

@@ -24,5 +24,6 @@ namespace BLL.Concrete
         {
             throw new NotImplementedException();
         }
+    
     }
 }

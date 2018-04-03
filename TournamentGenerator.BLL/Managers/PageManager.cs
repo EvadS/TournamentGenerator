@@ -1,21 +1,27 @@
-﻿using BLL.Abstract;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TournamentGenerator.Imports;
 using ViewModels;
 using BLL.Extensions;
 using TournametGenerator.ViewModels.Result;
-using TournametGenerator.ViewModels.Pages;
 using TournametGenerator.ViewModels.Competitor;
+using BLL.Interfaces;
+using TournametGenerator.DAL.DB;
 
 namespace BLL.Concrete
 {
     public class PageManager : IPageManager
     {
+
+        public TournamentContext db { get; set; }
+        private bool disposed = false;
+
+        public PageManager(TournamentContext dataBase)
+        {
+            db = dataBase;
+        }
+
         public void ApplyBigqOnPage(int pageNum)
         {
             throw new NotImplementedException();
@@ -186,6 +192,6 @@ namespace BLL.Concrete
         Result IPageManager.ImportFromExcel(string filePath)
         {
             throw new NotImplementedException();
-        }
+        }    
     }
 }

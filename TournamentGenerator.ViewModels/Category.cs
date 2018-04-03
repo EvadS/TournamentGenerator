@@ -8,9 +8,9 @@ namespace ViewModels
 {
    public class Category
     {
-        public int WeightFrom { get; set; }
-        public int WeightTo { get; set; }
-        public int Age { get; set; }
+        public int AgeFrom { get; set; }
+        public int AgeTo { get; set; }
+        public int  Weight { get; set; }
 
         public override string ToString()
         {
